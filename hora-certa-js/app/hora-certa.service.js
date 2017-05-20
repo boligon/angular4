@@ -12,14 +12,11 @@
     
     getHoraCerta: function() {
       var dataAtual = new Date();
-      var hora    = dataAtual.getHours();          
-      var min     = dataAtual.getMinutes();        
-      var seg     = dataAtual.getSeconds();     
-      return pad(hora,2) + ':' + pad(min,2) + ':' + pad(seg,2);
+      return pad(dataAtual.getHours(),2) + ':' + pad(dataAtual.getMinutes(),2) + ':' + pad(dataAtual.getSeconds(),2);
     },
     generateHoraCerta: function(delay, callback) {
       var self = this;
-      //callback(this.getHoraCerta());
+      callback(this.getHoraCerta());
       setInterval(function() {
         callback(self.getHoraCerta());
       }, delay);
