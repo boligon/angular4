@@ -19,7 +19,7 @@
     },
     generateHoraCerta: function(delay, callback) {
       var self = this;
-      callback(this.getHoraCerta());
+      //callback(this.getHoraCerta());
       setInterval(function() {
         callback(self.getHoraCerta());
       }, delay);
